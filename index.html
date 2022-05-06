@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4" defer ></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img src="imgs/Top.svg" alt="Logo">
+        <h1>ENCRIPTADOR</h1>
+    </header>
+    <main class="container" id="container">
+        <section class="container-input">
+            <textarea class="text-area" id="text-area-input" cols="40" rows="15" placeholder="Ingrese el texto aqui" onfocus="this.placeholder=''" onblur="this.placeholder='Ingrese el texto aqui'"></textarea>
+        </section>
+        <span><img src="imgs/bi_exclamation-circle-fill.svg" alt=""> Solo letras minúsculas y sin acentos</span>
+        <section class="container-buttons">
+            
+            <button class="encryptclass button-49" id="encrypt" onclick="encryptfn()">Encriptar</button>
+            <button class="decryptclass  button-49" id="decrypt" onclick="decryptfn()">Desencriptar</button>
+        </section>
+        <section class="container-message-encrypt-decrypt">
+            <p id="no-message">Ningún mensaje fue encontrado.</p>
+            <p id="enter-message">Ingrese el texto que desees encriptar o desencriptar.</p>
+            <textarea class="txt-area-output" id="text-area-output" cols="40" rows="15" readonly="true"></textarea>
+            <button class="copyclass button-49" id="copy" onclick="copytext()" ">Copiar</button>
+        </section>
+    </main>
+</body>
+</html>
