@@ -45,7 +45,6 @@ const decryptfn = () => {
     document.getElementById("copy").style = "display:none";
     document.getElementById("no-message").style = "display:inline-block";
     document.getElementById("enter-message").style = "display:inline-block";
-    document.getElementById("text-area-output").value = "";
   }
 };
 const copytext = () => {
