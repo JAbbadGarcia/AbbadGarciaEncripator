@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-style: normal;
+  overflow-x: hidden;
+}
+/*btn49*/
+.button-49,
+.button-49:after {
+  width: 230px;
+  height: 50px;
+  line-height: 20px;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  background: #0a3871;
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-49:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.1s;
+}
+.button-49:active {
+  box-shadow: 10px 10px 5px 0px rgba(77, 77, 77, 0.75);
+}
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "ALTERNATE TEXT";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #1d4a51 3%,
+    #0aa1dd 5%,
+    #0a3871 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/*end btn49*/
+
+body {
+  background: rgb(81, 100, 167);
+  background: linear-gradient(
+    90deg,
+    rgba(81, 100, 167, 1) 0%,
+    rgba(113, 139, 223, 1) 53%,
+    rgba(0, 58, 122, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  header {
+    width: 100%;
+    height: 70px;
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #53535322;
+    overflow-y: hidden;
+    h1 {
+      display: inline-block;
+      color: #b8d2f2;
+      transform: rotate(180deg);
+      transition: (0.3s);
+    }
+    h1:hover {
+      transform: rotate(360deg);
+      transition: (0.3s);
+    }
+    img:hover {
+      transform: rotate(360deg);
+      transition: (0.3s);
+    }
+  }
+  main {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container-input {
+      .text-area {
+        text-align: center;
+        border: 0px;
+        border-radius: 15px;
+        resize: none;
+        font-size: 27px;
+        width: 100%;
+        height: 300px;
+        color: #fff;
+        outline: none;
+        background-color: #1166ce00;
+      }
+      .text-area::placeholder {
+        color: #fff;
+        font-size: 30px;
+        text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+          0 0 20px rgba(0, 178, 255, 1);
+      }
+    }
+    span {
+      height: 30px;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      text-shadow: 0 0 5px rgb(253, 251, 157), 0 0 10px rgb(255, 181, 112),
+        0 0 20px rgba(0, 178, 255, 1);
+    }
+    .container-buttons {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 230px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 15px 5px;
+      }
+    }
+    .container-message-encrypt-decrypt {
+      width: 90vw;
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 20px;
+      background-color: #fff;
+      text-align: center;
+      grid-area: mensaje;
+      #no-message {
+        font-size: 25px;
+        font-weight: 500;
+        color: #737373;
+      }
+      #enter-message {
+        font-size: 16px;
+        font-weight: 400;
+        color: #373636;
+      }
+      .txt-area-output {
+        margin-top: 10px;
+        //border: 0px;
+        text-align: center;
+        background-color: #fff;
+        border: 0px;
+        width: 100%;
+        height: 250px;
+        outline: none;
+        color: #0a3871;
+        font-size: 25px;
+        resize: none;
+      }
+      button {
+        width: 230px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 15px 5px;
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+    html body{
+        margin: 30px 90px;
+        header{
+            background-color: #30303097;
+            border-radius: 15px;
+        }
+    }
+  main {
+    section.container-input {
+      .text-area {
+        font-size: 30px;
+      }
+      .text-area::placeholder {
+        font-size: 30px;
+      }
+    }
+    span {
+      font-size: 20px;
+    }
+    section.container-buttons {
+      display: flex;
+      flex-direction: row;
+      button {
+        width: 250px;
+        height: 70px;
+        font-size: 25px;
+      }
+    }
+    section.container-message-encrypt-decrypt {
+        width: 800px;
+      #no-message {
+        font-size: 30px;
+      }
+      #enter-message {
+        font-size: 25px;
+      }
+      .txt-area-output {
+        font-size: 30px;
+      }
+    }
+  }
+}
